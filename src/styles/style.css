@@ -1,0 +1,264 @@
+@font-face {
+  src: url("../fonts/Lato-Regular.ttf");
+  font-family: LatoRegular;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  src: url("../fonts/Lato-Semibold.ttf");
+  font-family: LatoSemibold;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  src: url("../fonts/Lato-Bold.ttf");
+  font-family: LatoBold;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  src: url("../fonts/Lato-Heavy.ttf");
+  font-family: LatoHeavy;
+  font-weight: 800;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  user-select: none;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1172px;
+}
+
+.header {
+  background: #10101D;
+  opacity: 90%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+}
+
+.header__container {
+  padding: 33px 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  max-width: 247px;
+  height: 35px;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.nav-menu__item {
+  font-family: LatoSemibold, sans-serif;
+  font-size: 13px;
+  margin-right: 60px;
+}
+
+.nav-menu__item:last-child {
+  margin-right: 0;
+}
+
+.nav-menu__item a {
+  text-decoration: none;
+}
+
+.main {
+  background-image: url("../images/main-bg.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.main__container {
+  padding-top: 203px;
+  padding-bottom: 340px;
+}
+
+.title span {
+  color: #3E9CDC;
+}
+
+.intro__title {
+  font-family: LatoBold, sans-serif;
+  font-size: 48px;
+  text-transform: uppercase;
+  max-width: 780px;
+  margin-bottom: 80px;
+  color: #000000;
+}
+
+.intro-info {
+  max-width: 534px;
+  margin-bottom: 80px;
+}
+
+.intro-info__title {
+  font-family: LatoBold, sans-serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.intro-info__text {
+  list-style: none;
+}
+
+.intro-info__item {
+  font-family: LatoRegular, sans-serif;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.intro-info__item:last-child {
+  margin-bottom: 0;
+}
+
+.intro-info__item::before {
+  content: '-';
+  margin: 0 11px 0 10px;
+}
+
+.intro__action {
+  display: flex;
+  justify-content: space-between;
+  max-width: 396px;
+}
+
+.button {
+  box-sizing: border-box;
+  padding: 15px 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: 2px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.intro__action .button {
+  width: 183px;
+  border-style: solid;
+}
+
+.intro__action_button_order {
+  border-color: #ffffff;
+  background: #3E9CDC;
+  color: #ffffff;
+}
+
+.intro__action_button_more {
+  border-color: #6F6D7B;
+  background: #ffffff;
+  color: #2A2B30;
+}
+
+.order {
+  background-image: url("../images/order-bg.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.order__container {
+  padding: 67px 0;
+}
+
+.order__title {
+  text-transform: uppercase;
+  font-family: LatoHeavy, sans-serif;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.order__text {
+  font-family: LatoRegular, sans-serif;
+  font-size: 18px;
+  text-align: center;
+  color: #BBBBBB;
+  margin-bottom: 80px;
+}
+
+.order-info {
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.dots {
+  display: grid;
+  grid-template-columns: repeat(4, 110px);
+  column-gap: 129px;
+  position: absolute;
+  top: 50px;
+  left: 170px;
+}
+
+.dots__item {
+  display: flex;
+  justify-content: space-between;
+  max-width: 110px;
+}
+
+.dots__item_dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #C4C4C4;
+}
+
+.order-info__menu {
+  display: grid;
+  grid-template-columns: repeat(5, 209px);
+  column-gap: 30px;
+}
+
+.order-info__menu_link a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.order-info__menu_link a svg {
+  margin-bottom: 20px;
+}
+
+.order-info__menu_text {
+  font-family: LatoRegular, sans-serif;
+  font-size: 16px;
+  max-width: 195px;
+  text-align: center;
+  color: #ffffff;
+}
