@@ -41,14 +41,33 @@
   });
 
   /** выбор пункта меню навигации */
-  const navMenu = document.querySelector('.nav');
+  const nav = document.querySelector('.nav');
   const navLinkElements = document.querySelectorAll('.nav__link');
-  navMenu.addEventListener('click', (e) => {
+  nav.addEventListener('click', (e) => {
     if(!e.target.classList.contains('active')){
       navLinkElements.forEach(elem => {
         elem.classList.remove('active');
       });
       e.target.classList.add('active');
+    }
+  });
+
+
+  /** бургер меню и меню навигации*/
+
+  const burger = document.querySelector('.burger');
+  const navMenu = document.querySelector('.nav-menu');
+  const navMenuItems = document.querySelectorAll('.nav-menu__item');
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    nav.classList.toggle('show');
+    header.classList.toggle('active');
+  });
+  navMenu.addEventListener('click', (e) => {
+    if(e.target.classList.contains('nav__link')){
+      nav.classList.remove('show');
+      burger.classList.remove('active');
+      header.classList.remove('active');
     }
   });
 }());
